@@ -7,9 +7,11 @@ from dotenv import load_dotenv
 from telegram import Bot
 from telegram.ext import Application, MessageHandler, filters, ContextTypes
 from telegram.constants import ParseMode
+import os
+from pathlib import Path
 
-# Загружаем переменные окружения
-load_dotenv()
+env_path = Path('/bots/TGmessage/.env')
+load_dotenv(dotenv_path=env_path)
 
 # Настройка логирования
 logging.basicConfig(
